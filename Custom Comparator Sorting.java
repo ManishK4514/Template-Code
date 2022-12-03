@@ -16,6 +16,11 @@ class Student{
 }
 public class Main {
     public static void operation(ArrayList<Student> students){
+        // Lamda Expression
+        // Collections.sort(students, (s1, s2) ->{
+        //     if(s1.roll != s2.roll) return s1.roll - s2.roll;
+        //     else return s1.name.compareTo(s2.name);
+        // });
         Collections.sort(students, new StudentComparator());
         for(int i  = 0; i < students.size(); i++){
             System.out.println(students.get(i).name + " " + students.get(i).roll);
